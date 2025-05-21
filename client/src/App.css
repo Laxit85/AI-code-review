@@ -1,0 +1,208 @@
+/* Global box-sizing to include padding and border in element's width and height */
+*, *::before, *::after {
+  box-sizing: border-box;
+  }
+  
+  body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  margin: 0;
+  padding: 0;
+  color: #e0e0e0;
+  }
+  
+  .container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 30px;
+  background: linear-gradient(145deg, #1e1e1e, #292929);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+  border-radius: 12px;
+  border: 1px solid #333;
+  }
+  
+  .title {
+  text-align: center;
+  font-size: 3rem;
+  color: #4fc3f7;
+  margin-bottom: 40px;
+  font-weight: 800;
+  text-shadow: 0 0 12px #4fc3f7cc;
+  letter-spacing: 1.5px;
+  }
+  
+  .section {
+  margin-bottom: 50px;
+  }
+  
+  .submit-section, .pulls-section {
+  background: #222;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  box-shadow: 0 4px 12px rgba(79, 195, 247, 0.2);
+  transition: background-color 0.3s ease;
+  }
+  
+  .submit-section:hover, .pulls-section:hover {
+  background: #2a2a2a;
+  }
+  
+  h2 {
+  font-size: 2rem;
+  color: #81d4fa;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #4fc3f7;
+  padding-bottom: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  }
+  
+  .code-input {
+  width: 100%;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.1rem;
+  padding: 18px;
+  border-radius: 8px;
+  border: 1px solid #555;
+  resize: vertical;
+  background: #121212;
+  color: #e0e0e0;
+  box-shadow: inset 0 2px 6px rgba(79, 195, 247, 0.3);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .code-input::placeholder {
+  color: #7a7a7a;
+  }
+  
+  .code-input:focus {
+  outline: none;
+  border-color: #4fc3f7;
+  box-shadow: 0 0 12px #4fc3f7aa;
+  background: #181818;
+  }
+  
+  .submit-button {
+  margin-top: 20px;
+  background-color: #4fc3f7;
+  color: #121212;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(79, 195, 247, 0.6);
+  }
+  
+  .submit-button:hover {
+  background-color: #3aa9e0;
+  box-shadow: 0 6px 20px rgba(58, 169, 224, 0.8);
+  }
+  
+  .review-result, .bug-error-locations {
+  margin-top: 25px;
+  padding: 20px;
+  border-radius: 10px;
+  background: #1a1a1a;
+  border: 1px solid #4fc3f7;
+  font-family: 'Source Code Pro', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 320px;
+  overflow-y: auto;
+  color: #b0e0ff;
+  box-shadow: 0 0 15px #4fc3f7aa;
+  }
+  
+  .review-result.verdict-approve {
+  border-left: 8px solid #27ae60;
+  background: #0b2e0b;
+  color: #a8f0a8;
+  box-shadow: 0 0 15px #27ae6022;
+  }
+  
+  .review-result.verdict-request\ changes {
+  border-left: 8px solid #e67e22;
+  background: #3a2a0a;
+  color: #f0c080;
+  box-shadow: 0 0 15px #e67e2222;
+  }
+  
+  .review-result.verdict-request\ changes h3,
+  .review-result.verdict-request\ changes pre {
+  color: inherit;
+  }
+  
+  .review-result.verdict-error {
+  border-left: 8px solid #c0392b;
+  background: #3a0a0a;
+  color: #f08080;
+  box-shadow: 0 0 15px #c0392b22;
+  }
+  
+  .bug-error-locations {
+  background: #2a0a0a;
+  border-left: 8px solid #e74c3c;
+  color: #f08080;
+  box-shadow: 0 0 15px #e74c3caa;
+  }
+  
+  .error-message {
+  margin-top: 20px;
+  padding: 14px;
+  background-color: #c0392b;
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(192, 57, 43, 0.7);
+  text-align: center;
+  }
+  
+  .pull-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 280px;
+  overflow-y: auto;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #222;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+  }
+  
+  .pull-list li {
+  padding: 14px 18px;
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #ccc;
+  }
+  
+  .pull-list li:hover {
+  background-color: #4fc3f7;
+  color: #121212;
+  }
+  
+  .pull-list li.selected {
+  background-color: #3aa9e0;
+  color: white;
+  font-weight: 700;
+  }
+  
+  .diff-view {
+  margin-top: 25px;
+  padding: 20px;
+  background: #222;
+  border-radius: 10px;
+  font-family: 'Source Code Pro', monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 420px;
+  overflow-y: auto;
+  border: 1px solid #444;
+  color: #cce7ff;
+  box-shadow: 0 0 15px #4fc3f7aa;
+  }
